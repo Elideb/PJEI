@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using PJEI;
+﻿using PJEI;
+using UnityEngine;
 
 public class TimeWrapperTest : MonoBehaviour {
 
