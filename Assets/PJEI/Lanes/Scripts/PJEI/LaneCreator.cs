@@ -2,6 +2,7 @@
 using System.Collections;
 
 namespace PJEI.Lanes {
+    [RequireComponent(typeof(InputControl))]
     public class LaneCreator : MonoBehaviour {
 
         /// <summary>
@@ -39,7 +40,11 @@ namespace PJEI.Lanes {
         /// </summary>
         private int currentY = 0;
 
+        private InputControl control;
+
         void Start() {
+            control = GetComponent<InputControl>();
+
             // Create the new lanes, adding to the origin position
             lanes = new Transform[lanesX][];
             for (int x = 0; x < lanesX; x++) {
@@ -64,16 +69,16 @@ namespace PJEI.Lanes {
         // Update is called once per frame
         void Update() {
             // Move around the matrix, but never going out of its bounds
-            if (Input.GetButtonDown("Derecha")) {
+            if (control.GetRightJustPressed()) {
                 currentX = Mathf.Min(currentX + 1, lanesX - 1);
                 animation.Play("right");
-            } else if (Input.GetButtonDown("Izquierda")) {
+            } else if (control.GetLeftJustPressed()) {
                 currentX = Mathf.Max(currentX - 1, 0);
                 animation.Play("left");
-            } else if (Input.GetButtonDown("Arriba")) {
+            } else if (control.GetUpJustPressed()) {
                 currentY = Mathf.Min(currentY + 1, lanesY - 1);
                 animation.Play("up");
-            } else if (Input.GetButtonDown("Abajo")) {
+            } else if (control.GetDownJustPressed()) {
                 currentY = Mathf.Max(currentY - 1, 0);
                 animation.Play("down");
             }
