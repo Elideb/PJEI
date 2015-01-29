@@ -12,6 +12,10 @@ Example of how to create and manipulate objects from a script. Also, how to mani
 ##Invaders
 Minimal version of SpaceInvaders, used as an introduction to state machines.
 
+The Space Invaders sprites have been taken from GooperBlooper22's DeviantArt account and the UNLICENSE terms do not apply to it.
+
+http://gooperblooper22.deviantart.com/art/Space-Invaders-Sprite-Sheet-135338373
+
 ##elideb/StateMachine
 Link to the project https://github.com/Elideb/StateMachine. It provides an easy to use and framework independent state machine implementation in C#.
 
