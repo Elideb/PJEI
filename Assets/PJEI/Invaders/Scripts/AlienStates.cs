@@ -1,5 +1,4 @@
-﻿using PJEI.Invaders;
-using StateMachine;
+﻿using StateMachine;
 
 namespace PJEI.Invaders {
 

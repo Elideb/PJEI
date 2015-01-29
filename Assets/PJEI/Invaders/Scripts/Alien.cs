@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using StateMachine;
+﻿using StateMachine;
+using UnityEngine;
 
 namespace PJEI.Invaders {
 
