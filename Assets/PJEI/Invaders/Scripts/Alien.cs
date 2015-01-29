@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using StateMachine;
 
 namespace PJEI.Invaders {
 
@@ -33,16 +34,34 @@ namespace PJEI.Invaders {
 
         #endregion
 
+        private StateMachine<Alien> stateMachine;
+
         public void Initialize(Vector2D initialPosition, int firstSprite, int pixelsPerMove) {
             this.pixelsPerMove = pixelsPerMove;
             spriteRenderer = GetComponent<SpriteRenderer>();
 
             SetPosition(initialPosition);
             SetSprite(firstSprite);
+
+            // TODO : Build the alien state machine
+            stateMachine = new StateMachine<Alien>(this, SampleAlienState.Instance)
+                .AddTransitions(
+                    Transition.From(SampleAlienState.Instance)
+                              .To(SampleAlienState.Instance)
+                              .When(HasFinishedMoving),
+                    Transition.FromAny<Alien>()
+                              .Except(SampleAlienState.Instance)
+                              .To(SampleAlienState.Instance)
+                              .When(IsMovingLeft),
+                    Transition.From(SampleAlienState.Instance)
+                              .ToPrev()
+                              .When(IsMovingRight)
+                );
+
         }
 
         public void StartExecution() {
-
+            StartCoroutine(StateMachineUpdate());
         }
 
         public void Move(Vector2D distance) {
@@ -58,6 +77,14 @@ namespace PJEI.Invaders {
         private void SetSprite(int spriteCount) {
             currentSprite = spriteCount % sprites.Length;
             spriteRenderer.sprite = sprites[currentSprite];
+        }
+
+        private System.Collections.IEnumerator StateMachineUpdate() {
+            while (true) {
+                // TODO : As the number of aliens decrease, this time should decrease too.
+                yield return new WaitForSeconds(1f);
+                stateMachine.Update();
+            }
         }
     }
 }
