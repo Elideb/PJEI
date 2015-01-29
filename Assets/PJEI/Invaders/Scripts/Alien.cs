@@ -17,13 +17,19 @@ namespace PJEI.Invaders {
         #region State information
 
         private int movesRemaining = 0;
-        public void SetMovesRemaining(int moves) { movesRemaining = moves; }
-        private bool HasFinishedMoving() { return movesRemaining == 0; }
+        public int MovesRemaining {
+            get { return movesRemaining; }
+            set { movesRemaining = Mathf.Max(0, value); }
+        }
+
+        public bool HasFinishedMoving() { return MovesRemaining == 0; }
 
         private bool movingLeft = true;
         public void StartMovingLeft() { movingLeft = true; }
         public void StartMovingRight() { movingLeft = false; }
         public bool IsMovingLeft() { return movingLeft; }
+        public bool IsMovingRight() { return movingLeft == false; }
+        public void ShiftMoveDirection() { movingLeft = !movingLeft; }
 
         #endregion
 
