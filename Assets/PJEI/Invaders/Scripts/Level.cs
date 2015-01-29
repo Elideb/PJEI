@@ -22,7 +22,7 @@ namespace PJEI.Invaders {
 
                     aliens[i * width + j] = alien;
 
-                    yield return new WaitForSeconds(.1f);
+                    yield return new WaitForSeconds(.05f);
                 }
             }
 
