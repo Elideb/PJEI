@@ -14,4 +14,5 @@ Minimal version of SpaceInvaders, used as an introduction to state machines.
 
 ##elideb/StateMachine
 Link to the project https://github.com/Elideb/StateMachine. It provides an easy to use and framework independent state machine implementation in C#.
+
 It can be configured as a Git subtree using the relative path Assets/elideb/StateMachine.
