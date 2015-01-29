@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: 8283e1e94c585564c9604c0e19c77b50
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: squid0
+    21300002: squid1
+    21300004: bug0
+    21300006: bug1
+    21300008: brain0
+    21300010: brain1
+    21300012: ufo
+    21300014: Shield
+    21300016: player
+    21300018: HiScore
+    21300020: Num0
+    21300022: Num1
+    21300024: Num2
+    21300026: Num3
+    21300028: Num4
+    21300030: Num5
+    21300032: Num7
+    21300034: ExplPlayer
+    21300036: Bullet
+    21300038: ExplAlien
+    21300040: Credit
+    21300042: Num6
+    21300044: Num9
+    21300046: Num8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: squid0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: squid1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 86
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bug0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 86
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bug1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 86
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brain0
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 86
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brain1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 86
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ufo
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 81
+        width: 48
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Shield
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 68
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 68
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HiScore
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 34
+        width: 122
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Num0
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 32
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Num1
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 33
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Num2
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 32
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Num3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 32
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Num4
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 32
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Num5
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 32
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Num7
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 32
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExplPlayer
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 21
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bullet
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 23
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExplAlien
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 20
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Credit
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 90
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Num6
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 32
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Num9
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 32
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Num8
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 32
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
