@@ -41,7 +41,7 @@ namespace PJEI.Invaders {
             SetSprite(firstSprite);
         }
 
-        public void Run() {
+        public void StartExecution() {
 
         }
 

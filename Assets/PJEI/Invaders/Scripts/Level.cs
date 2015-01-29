@@ -27,7 +27,7 @@ namespace PJEI.Invaders {
             }
 
             foreach (var alien in aliens)
-                alien.Run();
+                alien.StartExecution();
         }
     }
 
