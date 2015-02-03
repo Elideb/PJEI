@@ -54,9 +54,10 @@ namespace PJEI.Invaders {
                               .When(IsMovingLeft),
                     Transition.From(SampleAlienState.Instance)
                               .ToPrev()
-                              .When(IsMovingRight)
-                );
-
+                              .When(IsMovingRight),
+                    Transition.From(SampleAlienState.Instance)
+                              .To(SampleAlienState.Instance)
+                              .Always() );
         }
 
         public void StartExecution() {
