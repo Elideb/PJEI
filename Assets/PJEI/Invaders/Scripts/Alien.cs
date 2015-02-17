@@ -24,6 +24,18 @@ namespace PJEI.Invaders {
 
         public bool HasFinishedMoving() { return MovesRemaining == 0; }
 
+        public bool HasEndBeenReached() {
+            foreach (var alien in FindObjectsOfType<Alien>()) {
+                if (alien.IsMovingLeft() && alien.currentPos.x == -10)
+                    return true;
+
+                if (alien.IsMovingRight() && alien.currentPos.x == 10)
+                    return true;
+            }
+
+            return false;
+        }
+
         private bool movingLeft = true;
         public void StartMovingLeft() { movingLeft = true; }
         public void StartMovingRight() { movingLeft = false; }
@@ -43,21 +55,18 @@ namespace PJEI.Invaders {
             SetSprite(firstSprite);
 
             // TODO : Build the alien state machine
-            stateMachine = new StateMachine<Alien>(this, SampleAlienState.Instance)
+            stateMachine = new StateMachine<Alien>(this, StartMovement.Instance)
                 .AddTransitions(
-                    Transition.From(SampleAlienState.Instance)
-                              .To(SampleAlienState.Instance)
-                              .When(HasFinishedMoving),
                     Transition.FromAny<Alien>()
-                              .Except(SampleAlienState.Instance)
-                              .To(SampleAlienState.Instance)
-                              .When(IsMovingLeft),
-                    Transition.From(SampleAlienState.Instance)
-                              .ToPrev()
+                              .Except(MoveDown.Instance)
+                              .To(MoveDown.Instance)
+                              .When(HasEndBeenReached),
+                    Transition.From(MoveDown.Instance)
+                              .To(MoveLeft.Instance)
                               .When(IsMovingRight),
-                    Transition.From(SampleAlienState.Instance)
-                              .To(SampleAlienState.Instance)
-                              .Always() );
+                    Transition.From(MoveDown.Instance)
+                              .To(MoveRight.Instance)
+                              .When(IsMovingLeft) );
         }
 
         public void StartExecution() {
