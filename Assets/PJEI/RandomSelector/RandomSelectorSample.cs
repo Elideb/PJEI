@@ -32,10 +32,14 @@ namespace PJEI.RandomSelector {
             attacks.Add(new ImpossibleAttack());
 
             // Create the random selector.
-            // We pass as parameter the attacks to select from
+            // We pass as parameters the attacks to select from
             // and a function which receives an Attack (attack)
-            // and produces (=>) a float probability value from it.
-            selector = RandomSelector.Create(attacks, attack => attack.EvaluateProbability());
+            // and returns a float probability value from it.
+            selector = RandomSelector.CreateFloatSelector(attacks, this.GetAttackProbability);
+        }
+
+        private float GetAttackProbability(Attack attack) {
+            return attack.EvaluateProbability();
         }
 
         /// <summary>

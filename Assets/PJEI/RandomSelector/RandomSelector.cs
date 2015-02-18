@@ -51,7 +51,7 @@ namespace PJEI.RandomSelector {
         /// <param name="container">Collection of elements to include in the selector created.</param>
         /// <param name="probCalculation">A function to calculate the probability associated to each of the elements received.</param>
         /// <returns>The created selector, with all the corresponding elements added.</returns>
-        public static RandomSelector<T, float> Create<T>(IEnumerable<T> container, System.Func<T, float> probCalculation) {
+        public static RandomSelector<T, float> CreateFloatSelector<T>(IEnumerable<T> container, System.Func<T, float> probCalculation) {
             var selector = new RandomSelector<T, float>(SelectionOperator.FloatOp);
             foreach (var value in container)
                 selector.Add(probCalculation(value), value);
@@ -66,7 +66,7 @@ namespace PJEI.RandomSelector {
         /// <param name="container">Collection of elements to include in the selector created.</param>
         /// <param name="probCalculation">A function to calculate the probability associated to each of the elements received.</param>
         /// <returns>The created selector, with all the corresponding elements added.</returns>
-        public static RandomSelector<T, int> Create<T>(IEnumerable<T> container, System.Func<T, int> probCalculation) {
+        public static RandomSelector<T, int> CreateIntSelector<T>(IEnumerable<T> container, System.Func<T, int> probCalculation) {
             var selector = new RandomSelector<T, int>(SelectionOperator.IntOp);
             foreach (var value in container)
                 selector.Add(probCalculation(value), value);
