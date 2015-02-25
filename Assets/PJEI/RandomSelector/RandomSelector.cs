@@ -148,7 +148,7 @@ namespace PJEI.RandomSelector {
 
             foreach (var entry in values) {
                 acc = this.selectorOps.Sum(acc, entry.Value);
-                if (this.selectorOps.GreaterThan(acc, entry.Value))
+                if (this.selectorOps.GreaterThan(acc, selectedValue))
                     return entry.Key;
             }
 
