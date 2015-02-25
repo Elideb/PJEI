@@ -2,7 +2,7 @@
 using UnityEngine;
 
 namespace PJEI.RandomSelector {
-    public class RandomSelectorSample {
+    public class RandomSelectorSample : MonoBehaviour {
 
         public class Attack {
 
@@ -19,6 +19,18 @@ namespace PJEI.RandomSelector {
         }
 
         private RandomSelector<Attack, float> selector;
+
+        void Start() {
+            this.Initialize();
+        }
+
+        void Update() {
+            if (Input.GetKeyDown(KeyCode.Return)) {
+                Debug.Log("Selecting an attack...");
+                var attack = this.selector.Select();
+                Debug.Log("Selected attack " + attack.ToString());
+            }
+        }
 
         /// <summary>
         /// Must be called before attempting to call SelectAttack.
@@ -39,7 +51,9 @@ namespace PJEI.RandomSelector {
         }
 
         private float GetAttackProbability(Attack attack) {
-            return attack.EvaluateProbability();
+            var prob = attack.EvaluateProbability();
+            Debug.Log("Calculating probabilty of " + attack.ToString() + ": " + prob);
+            return prob;
         }
 
         /// <summary>
